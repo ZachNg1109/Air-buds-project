@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        PlayerPrefs.SetInt("Stars", 0);
 
         if (charList.Tappy == true)
         {
@@ -39,6 +40,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        
         if (cutsceneIntro.state == PlayState.Playing)
         {
             Time.timeScale = 0f;
@@ -50,7 +52,7 @@ public class GameManager : MonoBehaviour
         if(charList.Tappy == true)
         {
             Atappy.SetActive(true);
-            Debug.Log("ues");
+            
         }
         else if(charList.Bam == true)
         {

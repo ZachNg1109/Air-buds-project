@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Star : MonoBehaviour
 {
     StarSystem starSystem;
+    public CharactersObjects charList;
     private void Start()
     {
         starSystem = FindAnyObjectByType<StarSystem>();
@@ -13,6 +15,11 @@ public class Star : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         starSystem.starCount ++;
+        charList.StarsCollected += starSystem.starCount;
+        int totalStars = charList.StarsCollected + PlayerPrefs.GetInt("Stars");
+        PlayerPrefs.SetInt("Stars", totalStars);
         Destroy(gameObject);
+
+       
     }
 }

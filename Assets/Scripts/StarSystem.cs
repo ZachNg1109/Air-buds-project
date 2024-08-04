@@ -9,9 +9,18 @@ public class StarSystem : MonoBehaviour
 
     public TextMeshProUGUI starText;
 
+    public CharactersObjects charList;
+
+    private void Awake()
+    {
+        charList.StarsCollected = 0;
+
+    }
+
     private void Update()
     {
-        starText.text = starCount.ToString();
+        starText.text = charList.StarsCollected.ToString();
+        
     }
 
 }

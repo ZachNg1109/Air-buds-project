@@ -16,16 +16,19 @@ public class SpawnPowerups : MonoBehaviour
 
     public GameObject ogu1;
     public GameObject ogu2;
-    public GameObject starPrefab;
+   
 
     public CharactersObjects charList;
 
     private GameObject spawnedSkill;
-    private int rand2 = Random.Range(0, 3);
+    private int rand2;
     private bool canSpawn;
     private float spawnCD = 0f;
-    private bool canBuild = true;
-    private float buildCD = 0f;
+
+    private void Start()
+    {
+        rand2 = Random.Range(0, 3);
+    }
 
     private void Update()
     {
