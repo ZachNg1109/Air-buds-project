@@ -16,6 +16,7 @@ public class CharacterSelection : MonoBehaviour
     public CharactersObjects charList;
     private int order;
 
+    AudioManager audioManager;
     public void Start()
     {
         confirmButton.SetActive(false);
@@ -23,6 +24,8 @@ public class CharacterSelection : MonoBehaviour
         arrowBam.SetActive(false);
         arrowBiggie.SetActive(false);
         arrowOgu.SetActive(false);
+
+        audioManager = FindAnyObjectByType<AudioManager>();
     }
     public void SetActiveArrow(GameObject activeArrow)
     {
@@ -39,6 +42,7 @@ public class CharacterSelection : MonoBehaviour
     public void PickTappy()
     {
         confirmButton.SetActive(true);
+        audioManager.PlaySFX("Hover");
         SetActiveArrow(arrowTappy);
         order = 1;
     }
@@ -46,6 +50,7 @@ public class CharacterSelection : MonoBehaviour
     public void PickBam()
     {
         confirmButton.SetActive(true);
+        audioManager.PlaySFX("Hover");
         SetActiveArrow(arrowBam);
         order = 2;
     }
@@ -53,6 +58,7 @@ public class CharacterSelection : MonoBehaviour
     public void PickBiggie()
     {
         confirmButton.SetActive(true);
+        audioManager.PlaySFX("Hover");
         SetActiveArrow(arrowBiggie);
         order = 3;
     }
@@ -60,6 +66,7 @@ public class CharacterSelection : MonoBehaviour
     public void PickOgu()
     {
         confirmButton.SetActive(true);
+        audioManager.PlaySFX("Hover");
         SetActiveArrow(arrowOgu);
         order = 4;
     }
@@ -81,7 +88,8 @@ public class CharacterSelection : MonoBehaviour
                 charList.Ogu = true;
                 break;
         }
-
+        audioManager.PlaySFX("Confirm");
+        audioManager.PlayMusic("InGameBGM");
         SceneManager.LoadScene(1);
-    }
+    }   
 }
