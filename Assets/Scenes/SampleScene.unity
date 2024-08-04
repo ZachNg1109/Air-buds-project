@@ -538,7 +538,6 @@ GameObject:
   m_Component:
   - component: {fileID: 278755050}
   - component: {fileID: 278755049}
-  - component: {fileID: 278755048}
   - component: {fileID: 278755051}
   - component: {fileID: 278755052}
   m_Layer: 0
@@ -548,22 +547,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &278755048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 278755047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a12cb721c926ace4d83c6458dcb2ec84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDead: 0
-  isSunGlasses: 0
-  isCombed: 0
-  cloudyEffect: {fileID: 935422594151779228}
 --- !u!114 &278755049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -995,7 +978,6 @@ GameObject:
   m_Component:
   - component: {fileID: 626897240}
   - component: {fileID: 626897239}
-  - component: {fileID: 626897238}
   - component: {fileID: 626897241}
   - component: {fileID: 626897242}
   m_Layer: 0
@@ -1005,22 +987,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &626897238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 626897237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a12cb721c926ace4d83c6458dcb2ec84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDead: 0
-  isSunGlasses: 0
-  isCombed: 0
-  cloudyEffect: {fileID: 935422594151779228}
 --- !u!114 &626897239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1576,7 +1542,6 @@ GameObject:
   m_Component:
   - component: {fileID: 877337804}
   - component: {fileID: 877337803}
-  - component: {fileID: 877337802}
   - component: {fileID: 877337805}
   m_Layer: 0
   m_Name: mascot char (2)
@@ -1585,22 +1550,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &877337802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 877337801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a12cb721c926ace4d83c6458dcb2ec84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDead: 0
-  isSunGlasses: 0
-  isCombed: 0
-  cloudyEffect: {fileID: 935422594151779228}
 --- !u!114 &877337803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2480,6 +2429,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5840503281562347046, guid: 0bc124495d02d514d86e4c4a8cd94475, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1315495653}
+    - targetCorrespondingSourceObject: {fileID: 5840503281562347046, guid: 0bc124495d02d514d86e4c4a8cd94475, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1315495655}
   m_SourcePrefab: {fileID: 100100000, guid: 0bc124495d02d514d86e4c4a8cd94475, type: 3}
 --- !u!4 &1315495651 stripped
 Transform:
@@ -2539,6 +2491,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5412565, y: 1.1153188, z: 0.70011246}
   m_Center: {x: 0.014040813, y: 0.40662205, z: -0.10098622}
+--- !u!114 &1315495655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315495652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a12cb721c926ace4d83c6458dcb2ec84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDead: 0
+  isSunGlasses: 0
+  isCombed: 0
+  cloudyEffect: {fileID: 935422594151779228}
 --- !u!1 &1396590834
 GameObject:
   m_ObjectHideFlags: 0
@@ -2648,7 +2616,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1401388673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2771,6 +2739,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8260892642513632844, guid: c66e6e61cf67d2940bee53f6d0bbffcf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1463900356}
+    - targetCorrespondingSourceObject: {fileID: 8260892642513632844, guid: c66e6e61cf67d2940bee53f6d0bbffcf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1463900358}
   m_SourcePrefab: {fileID: 100100000, guid: c66e6e61cf67d2940bee53f6d0bbffcf, type: 3}
 --- !u!4 &1463900354 stripped
 Transform:
@@ -2830,6 +2801,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5412565, y: 1.1153188, z: 0.70011246}
   m_Center: {x: 0.014040813, y: 0.40662205, z: -0.10098622}
+--- !u!114 &1463900358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463900355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a12cb721c926ace4d83c6458dcb2ec84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDead: 0
+  isSunGlasses: 0
+  isCombed: 0
+  cloudyEffect: {fileID: 935422594151779228}
 --- !u!1 &1491338796
 GameObject:
   m_ObjectHideFlags: 0
@@ -3263,6 +3250,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4905647674813440039, guid: 9903185f0f79e6a44bcacee3689acb5a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1591936210}
+    - targetCorrespondingSourceObject: {fileID: 4905647674813440039, guid: 9903185f0f79e6a44bcacee3689acb5a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1591936212}
   m_SourcePrefab: {fileID: 100100000, guid: 9903185f0f79e6a44bcacee3689acb5a, type: 3}
 --- !u!4 &1591936208 stripped
 Transform:
@@ -3322,6 +3312,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5412565, y: 1.1153188, z: 0.70011246}
   m_Center: {x: 0.014040813, y: 0.40662205, z: -0.10098622}
+--- !u!114 &1591936212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591936209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a12cb721c926ace4d83c6458dcb2ec84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDead: 0
+  isSunGlasses: 0
+  isCombed: 0
+  cloudyEffect: {fileID: 935422594151779228}
 --- !u!1 &1659617221
 GameObject:
   m_ObjectHideFlags: 0
