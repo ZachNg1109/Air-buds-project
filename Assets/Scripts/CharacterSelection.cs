@@ -89,7 +89,7 @@ public class CharacterSelection : MonoBehaviour
                 break;
         }
         audioManager.PlaySFX("Confirm");
-        audioManager.PlayMusic("InGameBGM");
+        audioManager.MusicVolume(0f);
         SceneManager.LoadScene(1);
     }   
 }

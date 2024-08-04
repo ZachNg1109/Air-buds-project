@@ -303,24 +303,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSounds:
-  - name: BGM
-    clip: {fileID: 8300000, guid: 8c34fd1e94b79ad47934f94a60a3701b, type: 3}
+  - name: StartBGM
+    clip: {fileID: 8300000, guid: 4977feb27bc1a264b9e8e95ab1c65258, type: 3}
+  - name: InGameBGM
+    clip: {fileID: 8300000, guid: 20cacac5996de6a4b906abefebdbb75d, type: 3}
   sfxSounds:
-  - name: MagicSpell
-    clip: {fileID: 8300000, guid: caff85284abdb6847b8df421bd232f15, type: 3}
-  - name: Heal
-    clip: {fileID: 8300000, guid: b86ee6b31126da241a49e14358f02c38, type: 3}
-  - name: Score
-    clip: {fileID: 8300000, guid: 26362720b0804c848b3124d4ee36758e, type: 3}
-  - name: Speed
-    clip: {fileID: 8300000, guid: ffa2dc50ee5819f40b98954add11b823, type: 3}
-  - name: Time
-    clip: {fileID: 8300000, guid: 6495fc77e17d6df40b1dd4a115bb6481, type: 3}
-  - name: Blackhole
-    clip: {fileID: 8300000, guid: 56cf74998f0da794889c49980a7154cd, type: 3}
-  - name: hit
-    clip: {fileID: 8300000, guid: 441f2725193d0e047b94c15fa242e41f, type: 3}
-  - name: Click
-    clip: {fileID: 8300000, guid: dd5b0a0287adc99449b39c7305eca84d, type: 3}
+  - name: Start
+    clip: {fileID: 8300000, guid: 6872a81b34d0e7f469aee2bbfcd7725d, type: 3}
+  - name: Confirm
+    clip: {fileID: 8300000, guid: b90130b46f5212345a9b6ed446f16a86, type: 3}
+  - name: Hover
+    clip: {fileID: 8300000, guid: e0310fa622abc6349a0cb111b1cec87d, type: 3}
+  - name: Trophy
+    clip: {fileID: 8300000, guid: dd7a6b357872d614b8af87aa05f4af01, type: 3}
+  - name: Flip
+    clip: {fileID: 8300000, guid: ee0e722d8bc2823478ccb4393e10e55a, type: 3}
+  - name: TrophyClose
+    clip: {fileID: 8300000, guid: 19196825495a5824fa582cd2e30b3394, type: 3}
   musicSource: {fileID: 7533636572243428497}
   sfxSource: {fileID: 2917117767939466445}
