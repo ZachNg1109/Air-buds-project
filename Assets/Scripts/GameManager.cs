@@ -13,6 +13,30 @@ public class GameManager : MonoBehaviour
     public GameObject ABiggie;
     public GameObject AOgu;
 
+    private void Awake()
+    {
+
+        if (charList.Tappy == true)
+        {
+            Atappy.SetActive(true);
+        }
+        else if (charList.Bam == true)
+        {
+            ABam.SetActive(true);
+
+        }
+        else if (charList.Bam == true)
+        {
+            ABiggie.SetActive(true);
+
+        }
+        else if (charList.Bam == true)
+        {
+            AOgu.SetActive(true);
+
+        }
+    }
+
     private void Update()
     {
         if (cutsceneIntro.state == PlayState.Playing)
@@ -20,12 +44,13 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0f;
 
         }
-        else
+        else if(cutsceneIntro.state == PlayState.Paused)
             Time.timeScale = 1f;
 
         if(charList.Tappy == true)
         {
             Atappy.SetActive(true);
+            Debug.Log("ues");
         }
         else if(charList.Bam == true)
         {

@@ -44,7 +44,7 @@ public class BuildingSpawner : MonoBehaviour
     private void SpawnBuildings()
     {
        
-        newBuilding = Instantiate(spawnedBuilding, new Vector3(75f, -4f, 90.4400027f), Quaternion.Euler(5.96592379f, 15.0329046f, 328.51059f));
+        newBuilding = Instantiate(spawnedBuilding, new Vector3(73.22f, -0.31f, 92.03f), Quaternion.Euler(8.157f, 20.737f, -27.122f));
         newBuilding.transform.SetParent(gameObject.transform, true);
 
 
@@ -58,7 +58,7 @@ public class BuildingSpawner : MonoBehaviour
     private void SpawnBuildingsOpposite()
     {
 
-        newBuilding2 = Instantiate(spawnedBuilding2, new Vector3(60.7199973f, 0.201f, 90.4400027f), Quaternion.Euler(-9.623f, -15f, 400f));
+        newBuilding2 = Instantiate(spawnedBuilding2, new Vector3(62.26f, -1.3f, 98.87f), Quaternion.Euler(-38.846f, -19.126f, 25.164f));
         newBuilding2.transform.SetParent(gameObject.transform, true);
 
 

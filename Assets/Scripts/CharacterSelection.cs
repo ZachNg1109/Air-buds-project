@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CharacterSelection : MonoBehaviour
 {
@@ -15,6 +17,9 @@ public class CharacterSelection : MonoBehaviour
 
     public CharactersObjects charList;
     private int order;
+
+    public TMP_Text Tappytext;
+
 
     public void Start()
     {
@@ -41,6 +46,8 @@ public class CharacterSelection : MonoBehaviour
         confirmButton.SetActive(true);
         SetActiveArrow(arrowTappy);
         order = 1;
+
+        Tappytext.text = ("Longest Distance: " + PlayerPrefs.GetFloat("Tappy_Highscore").ToString() + " KM");
     }
 
     public void PickBam()

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ObstacleSpawner : MonoBehaviour
@@ -8,6 +9,7 @@ public class ObstacleSpawner : MonoBehaviour
     public GameObject cloud;
     public GameObject bird;
     public GameObject star;
+
 
     [SerializeField] private float obstacleTimer = 3.5f;
 
@@ -20,6 +22,16 @@ public class ObstacleSpawner : MonoBehaviour
     private bool canObst = true;
     private float obstCD;
 
+    public CharactersObjects charList;
+
+    public bool canStar = true;
+    public float starCD = 0f;
+
+
+    private void Start()
+    {
+        //SpawnBirds();
+    }
     private void FixedUpdate()
     {
         if (canObst == false)
@@ -34,12 +46,28 @@ public class ObstacleSpawner : MonoBehaviour
             }
         }
 
-        if(canObst == true)
+        if (canObst == true)
         {
             StartCoroutine(ObstacleFrequency());
 
         }
         powerNegativeValueHolder = Random.Range(0, 3);
+
+        if (charList.distance > 10 && canStar == true)
+        {
+            SpawnStar();
+            if (canStar == false)
+            {
+                starCD += Time.deltaTime;
+
+
+                if (starCD > 8f)
+                {
+                    starCD = 0;
+                    canStar = true;
+                }
+            }
+        }
     }
 
     private void SpawnBomb()
@@ -117,7 +145,7 @@ public class ObstacleSpawner : MonoBehaviour
 
     private void SpawnBirds()
     {
-        int rand = Random.Range(0, 1);
+        int rand = Random.Range(1, 2);
         int n = 0;
         while (n < rand)
         {
@@ -128,10 +156,19 @@ public class ObstacleSpawner : MonoBehaviour
         }
 
 
-        if (this.transform.localRotation.x > 160)
-        {
-            Destroy(spawnedBird);
-        }
+      
     }
 
+    
+    private void SpawnStar()
+    {
+        canStar = false;    
+        spawnedStar = Instantiate(star, new Vector3(68f + ((-1) * powerNegativeValueHolder), 1.98000002f, 96.7200027f), Quaternion.Euler(5.96592379f, 15.0329046f, 328.51059f));
+        spawnedStar.transform.SetParent(gameObject.transform, true);
+
+
+       
+    }
+           
+        
 }

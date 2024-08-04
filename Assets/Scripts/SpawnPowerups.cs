@@ -16,6 +16,7 @@ public class SpawnPowerups : MonoBehaviour
 
     public GameObject ogu1;
     public GameObject ogu2;
+    public GameObject starPrefab;
 
     public CharactersObjects charList;
 
@@ -23,6 +24,8 @@ public class SpawnPowerups : MonoBehaviour
     private int rand2 = Random.Range(0, 3);
     private bool canSpawn;
     private float spawnCD = 0f;
+    private bool canBuild = true;
+    private float buildCD = 0f;
 
     private void Update()
     {
@@ -96,5 +99,10 @@ public class SpawnPowerups : MonoBehaviour
                 spawnCD = 0;
             }
         }
+
+        
+
+
+
     }
 }

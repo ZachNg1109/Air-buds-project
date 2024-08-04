@@ -11,22 +11,28 @@ public class SkillsPickup : MonoBehaviour
 
     public GameObject skillButton1;
     public GameObject skillButton2;
+    public CharactersObjects charlist;
+
+    private void Awake()
+    {
+        Move1 = false;
+        Move2 = false;
+    }
 
     private void Update()
     {
-        if(!Move1)
-        {
-            Move2 = !Move2;
-        }
+        
 
 
         if (Move1 == true)
         {
+            Move2 = false;
             skillButton1.SetActive(true);
 
         }
         else if (Move2 == true)
         {
+            Move1 = false;
             skillButton2.SetActive(true);
 
         }
@@ -44,6 +50,11 @@ public class SkillsPickup : MonoBehaviour
         {
             Move2 = true;
 
+        }
+
+        if (other.gameObject.CompareTag("Star"))
+        {
+            charlist.StarsCollected += 1;
         }
 
     }

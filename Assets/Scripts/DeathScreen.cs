@@ -26,7 +26,7 @@ public class DeathScreen : MonoBehaviour
         deathScreen.SetActive(false);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (playerConditions.isDead && timer > 0)
         {

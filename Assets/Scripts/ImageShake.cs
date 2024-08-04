@@ -12,10 +12,10 @@ public class ImageShake : MonoBehaviour
 
     private void Start()
     {
-        if (imageTransform == null)
-        {
+        //if (imageTransform == null)
+        //{
             imageTransform = GetComponent<RectTransform>();
-        }
+        //}
         originalPosition = imageTransform.localPosition;
     }
 
