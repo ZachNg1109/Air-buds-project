@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float flyingSpeed;
     [SerializeField] private float maximumRotation;
 
-    private float currentRotationX = 0f;
+    private float currentRotationY = 0f;
     void Update()
     {
         if (Input.touchCount > 0) 
@@ -21,10 +21,10 @@ public class PlayerMovement : MonoBehaviour
 
             if (touch.phase == TouchPhase.Moved)
             {
-                float rotationX = -touch.deltaPosition.x * flyingSpeed * Time.deltaTime;
-                currentRotationX += rotationX;
-                currentRotationX = Mathf.Clamp(currentRotationX, -maximumRotation, maximumRotation);
-                transform.localRotation = Quaternion.Euler(currentRotationX, transform.localRotation.eulerAngles.y, transform.localRotation.eulerAngles.z);
+                float rotationY = -touch.deltaPosition.x * flyingSpeed * Time.deltaTime;
+                currentRotationY += rotationY;
+                currentRotationY = Mathf.Clamp(currentRotationY, -maximumRotation, maximumRotation);
+                transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles.x, currentRotationY, transform.localRotation.eulerAngles.z);
 
             }
         }

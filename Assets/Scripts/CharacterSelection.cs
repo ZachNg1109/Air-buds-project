@@ -19,6 +19,11 @@ public class CharacterSelection : MonoBehaviour
     public GameObject biggieHighscore;
     public GameObject oguHighscore;
 
+    public GameObject tappy3D;
+    public GameObject bam3D;
+    public GameObject biggie3D;
+    public GameObject ogu3D;
+
     public CharactersObjects charList;
     private int order;
 
@@ -53,6 +58,12 @@ public class CharacterSelection : MonoBehaviour
         biggieHighscore.SetActive(false);
         oguHighscore.SetActive(false);
 
+        tappy3D.SetActive(true);
+
+        bam3D.SetActive(false);
+        biggie3D.SetActive(false);
+        ogu3D.SetActive(false);
+
         audioManager.PlaySFX("Hover");
         SetActiveArrow(arrowTappy);
         order = 1;
@@ -65,6 +76,12 @@ public class CharacterSelection : MonoBehaviour
         tappyHighscore.SetActive(false);
         biggieHighscore.SetActive(false);
         oguHighscore.SetActive(false);
+
+        bam3D.SetActive(true);
+
+        tappy3D.SetActive(false);
+        biggie3D.SetActive(false);
+        ogu3D.SetActive(false);
 
         audioManager.PlaySFX("Hover");
         SetActiveArrow(arrowBam);
@@ -79,6 +96,11 @@ public class CharacterSelection : MonoBehaviour
         bamHighscore.SetActive(false);
         oguHighscore.SetActive(false);
 
+        biggie3D.SetActive(true);
+
+        bam3D.SetActive(false);
+        tappy3D.SetActive(false);
+        ogu3D.SetActive(false);
 
         audioManager.PlaySFX("Hover");
         SetActiveArrow(arrowBiggie);
@@ -92,6 +114,12 @@ public class CharacterSelection : MonoBehaviour
         tappyHighscore.SetActive(false);
         bamHighscore.SetActive(false);
         biggieHighscore.SetActive(false);
+
+        ogu3D.SetActive(true);
+
+        bam3D.SetActive(false);
+        biggie3D.SetActive(false);
+        tappy3D.SetActive(false);
 
         audioManager.PlaySFX("Hover");
         SetActiveArrow(arrowOgu);

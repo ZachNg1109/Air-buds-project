@@ -345,6 +345,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8047509172261536849, guid: e90e7a6e558d33749abebf3dfe271585, type: 3}
       insertIndex: -1
       addedObject: {fileID: 180310114}
+    - targetCorrespondingSourceObject: {fileID: 8047509172261536849, guid: e90e7a6e558d33749abebf3dfe271585, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 180310116}
   m_SourcePrefab: {fileID: 100100000, guid: e90e7a6e558d33749abebf3dfe271585, type: 3}
 --- !u!4 &180310112 stripped
 Transform:
@@ -404,6 +407,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &180310116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180310113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a12cb721c926ace4d83c6458dcb2ec84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDead: 0
+  isSunGlasses: 0
+  isCombed: 0
+  cloudyEffect: {fileID: 935422594151779228}
 --- !u!1 &278053926
 GameObject:
   m_ObjectHideFlags: 0
@@ -2622,7 +2641,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1401388674}
   - component: {fileID: 1401388673}
-  - component: {fileID: 1401388676}
   - component: {fileID: 1401388677}
   m_Layer: 0
   m_Name: mascot char
@@ -2630,7 +2648,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1401388673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2643,8 +2661,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb3cc7d4275df2544a283c19033c5f70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flyingSpeed: 4
-  maximumRotation: 30
+  flyingSpeed: 5
+  maximumRotation: 25
 --- !u!4 &1401388674
 Transform:
   m_ObjectHideFlags: 0
@@ -2662,22 +2680,6 @@ Transform:
   - {fileID: 180310112}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1401388676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1401388672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a12cb721c926ace4d83c6458dcb2ec84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDead: 0
-  isSunGlasses: 0
-  isCombed: 0
-  cloudyEffect: {fileID: 935422594151779228}
 --- !u!114 &1401388677
 MonoBehaviour:
   m_ObjectHideFlags: 0
