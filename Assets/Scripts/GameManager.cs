@@ -13,46 +13,34 @@ public class GameManager : MonoBehaviour
     public GameObject ABiggie;
     public GameObject AOgu;
 
-    private void Awake()
+    AudioManager audioManager;
+    private bool actionPerformed = false;
+
+    private void Start()
     {
-        PlayerPrefs.SetInt("Stars", 0);
-
-        if (charList.Tappy == true)
-        {
-            Atappy.SetActive(true);
-        }
-        else if (charList.Bam == true)
-        {
-            ABam.SetActive(true);
-
-        }
-        else if (charList.Bam == true)
-        {
-            ABiggie.SetActive(true);
-
-        }
-        else if (charList.Bam == true)
-        {
-            AOgu.SetActive(true);
-
-        }
+        audioManager = FindAnyObjectByType<AudioManager>();
     }
-
     private void Update()
     {
-        
         if (cutsceneIntro.state == PlayState.Playing)
         {
             Time.timeScale = 0f;
-
         }
-        else if(cutsceneIntro.state == PlayState.Paused)
+        else
+        {
             Time.timeScale = 1f;
+
+            if (!actionPerformed )
+            {
+                audioManager.MusicVolume(1f);
+                audioManager.PlayMusic("InGameBGM");
+                actionPerformed = true;
+            }
+        }
 
         if(charList.Tappy == true)
         {
             Atappy.SetActive(true);
-            
         }
         else if(charList.Bam == true)
         {
