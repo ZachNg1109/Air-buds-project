@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -30,6 +31,13 @@ public class AchievementCheck : MonoBehaviour
     public GameObject tick11;
     public GameObject tick12;
 
+    public TMP_Text starTexts;
+    public TMP_Text tappyHighscore;
+    public TMP_Text bamHighscore;
+    public TMP_Text biggieHighscore;
+    public TMP_Text oguHighscore;
+
+
     private void Awake()
     {
         //if (characterList.Tappy == true)
@@ -53,6 +61,14 @@ public class AchievementCheck : MonoBehaviour
         //}
 
         characterList.distance = 0f;
+
+        starTexts.text = PlayerPrefs.GetInt("Stars").ToString();
+
+        tappyHighscore.text = ("Longest Distance: " + PlayerPrefs.GetFloat("Tappy_Highscore").ToString() + "km");
+        bamHighscore.text = ("Longest Distance: " + PlayerPrefs.GetFloat("Bam_Highscore").ToString() + "km");
+        biggieHighscore.text = ("Longest Distance: " + PlayerPrefs.GetFloat("Biggie_Highscore").ToString() + "km");
+        oguHighscore.text = ("Longest Distance: " + PlayerPrefs.GetFloat("Ogu_Highscore").ToString() + "km");
+
 
     }
 

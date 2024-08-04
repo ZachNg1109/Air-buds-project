@@ -16,9 +16,29 @@ public class GameManager : MonoBehaviour
     AudioManager audioManager;
     private bool actionPerformed = false;
 
-    private void Start()
+    private void Awake()
     {
         audioManager = FindAnyObjectByType<AudioManager>();
+
+        if (charList.Tappy == true)
+        {
+            Atappy.SetActive(true);
+        }
+        else if (charList.Bam == true)
+        {
+            ABam.SetActive(true);
+
+        }
+        else if (charList.Bam == true)
+        {
+            ABiggie.SetActive(true);
+
+        }
+        else if (charList.Bam == true)
+        {
+            AOgu.SetActive(true);
+
+        }
     }
     private void Update()
     {
@@ -26,7 +46,7 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 0f;
         }
-        else
+        else if(cutsceneIntro.state == PlayState.Paused)
         {
             Time.timeScale = 1f;
 

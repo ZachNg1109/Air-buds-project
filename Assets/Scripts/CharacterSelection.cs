@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,6 +13,11 @@ public class CharacterSelection : MonoBehaviour
     public GameObject arrowBam;
     public GameObject arrowBiggie;
     public GameObject arrowOgu;
+
+    public GameObject tappyHighscore;
+    public GameObject bamHighscore;
+    public GameObject biggieHighscore;
+    public GameObject oguHighscore;
 
     public CharactersObjects charList;
     private int order;
@@ -42,6 +48,11 @@ public class CharacterSelection : MonoBehaviour
     public void PickTappy()
     {
         confirmButton.SetActive(true);
+        tappyHighscore.SetActive(true);
+        bamHighscore.SetActive(false);
+        biggieHighscore.SetActive(false);
+        oguHighscore.SetActive(false);
+
         audioManager.PlaySFX("Hover");
         SetActiveArrow(arrowTappy);
         order = 1;
@@ -50,6 +61,11 @@ public class CharacterSelection : MonoBehaviour
     public void PickBam()
     {
         confirmButton.SetActive(true);
+        bamHighscore.SetActive(true);
+        tappyHighscore.SetActive(false);
+        biggieHighscore.SetActive(false);
+        oguHighscore.SetActive(false);
+
         audioManager.PlaySFX("Hover");
         SetActiveArrow(arrowBam);
         order = 2;
@@ -58,6 +74,12 @@ public class CharacterSelection : MonoBehaviour
     public void PickBiggie()
     {
         confirmButton.SetActive(true);
+        biggieHighscore.SetActive(true);
+        tappyHighscore.SetActive(false);
+        bamHighscore.SetActive(false);
+        oguHighscore.SetActive(false);
+
+
         audioManager.PlaySFX("Hover");
         SetActiveArrow(arrowBiggie);
         order = 3;
@@ -66,6 +88,11 @@ public class CharacterSelection : MonoBehaviour
     public void PickOgu()
     {
         confirmButton.SetActive(true);
+        oguHighscore.SetActive(true);
+        tappyHighscore.SetActive(false);
+        bamHighscore.SetActive(false);
+        biggieHighscore.SetActive(false);
+
         audioManager.PlaySFX("Hover");
         SetActiveArrow(arrowOgu);
         order = 4;
