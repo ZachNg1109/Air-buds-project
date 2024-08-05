@@ -55,17 +55,20 @@ public class ObstacleSpawner : MonoBehaviour
 
         if (charList.distance > 10 && canStar == true)
         {
+            //canStar = false;
             SpawnStar();
-            if (canStar == false)
+            
+        }
+
+        if (canStar == false)
+        {
+            starCD += Time.deltaTime;
+
+
+            if (starCD > 8f)
             {
-                starCD += Time.deltaTime;
-
-
-                if (starCD > 8f)
-                {
-                    starCD = 0;
-                    canStar = true;
-                }
+                starCD = 0;
+                canStar = true;
             }
         }
     }

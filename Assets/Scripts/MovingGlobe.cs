@@ -8,11 +8,13 @@ public class MovingGlobe : MonoBehaviour
     public GameObject coin;
     public Canvas coinCanvas;
     public ScreenPause pauser;
-    private Canvas currentCanvas;
     public GameObject obstacleTest;
+    public GameObject middleRef;
 
     public float speed = 20f;
+
     private float duration = 0f;
+    private Canvas currentCanvas;
 
     int y = 0;
 
@@ -48,10 +50,7 @@ public class MovingGlobe : MonoBehaviour
         
 
 
-        if (Input.GetKeyDown(KeyCode.Y))
-        {
-            pauser.PauseScreen();
-        }
+       
 
       
 
@@ -95,11 +94,9 @@ public class MovingGlobe : MonoBehaviour
         currentCanvas = coinCanvas;
 
         coinCanvas.enabled = true;
-        int x = 1;
-        for (int n = 0; n < 10; n++)
-        {
-            Instantiate(coin, new Vector3(0.815f * Mathf.Pow(-1f, x), 3.65f, -1.6f + x), Quaternion.identity);
-            x++;
-        }
+        
+        
+        Instantiate(coin, middleRef.transform.position, middleRef.transform.rotation);
+         
     }
 }

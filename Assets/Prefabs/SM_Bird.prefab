@@ -9863,7 +9863,7 @@ ParticleSystem:
   looping: 0
   prewarm: 0
   playOnAwake: 0
-  useUnscaledTime: 0
+  useUnscaledTime: 1
   autoRandomSeed: 1
   startDelay:
     serializedVersion: 2
@@ -19568,15 +19568,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 778f719166f86f9489e62eac038f617e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 7
+      value: 5.51509
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 778f719166f86f9489e62eac038f617e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 7
+      value: 5.51509
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 778f719166f86f9489e62eac038f617e, type: 3}
       propertyPath: m_LocalScale.z
-      value: 7
+      value: 5.51509
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 778f719166f86f9489e62eac038f617e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19668,8 +19668,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.5468882, y: 0.15577686, z: 0.3015645}
-  m_Center: {x: 0, y: 0.07878755, z: -0.023901582}
+  m_Size: {x: 0.36635193, y: 0.09928348, z: 0.3015645}
+  m_Center: {x: -0.0005933132, y: 0.07954737, z: -0.02390158}
 --- !u!114 &6120391514124970740
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de923aab9c6c2c842a39b137cf533bda, type: 3}
   m_Name: Mascots
   m_EditorClassIdentifier: 
-  Tappy: 1
+  Tappy: 0
   Bam: 0
   Biggie: 0
   Ogu: 0
   StarsCollected: 0
-  distance: 0.02
+  distance: 13.363815
+  isStarted: 0

@@ -16,6 +16,15 @@ public class DeathScreen : MonoBehaviour
 
     public float timer = 10;
     public TextMeshProUGUI timerText;
+    public GameObject sorry;
+    public CharactersObjects charList;
+
+    public GameObject tappyDeath;
+    public GameObject bamDeath;
+    public GameObject biggieDeath;
+    public GameObject oguDeath;
+
+    private int randomNum;
 
     private void Start()
     {
@@ -24,16 +33,39 @@ public class DeathScreen : MonoBehaviour
         imageShake2 = FindAnyObjectByType<ImageShake2>();
         scoreManager = FindAnyObjectByType<ScoreManager>();
         deathScreen.SetActive(false);
+        sorry.SetActive(false);
+        randomNum = Random.Range(1, 100);
+
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (playerConditions.isDead && timer > 0)
         {
+            if(randomNum > 35)
+            {
+                if(charList.Tappy == true)
+                {
+                    tappyDeath.SetActive(true);
+                }
+                else if (charList.Tappy == true)
+                {
+                    bamDeath.SetActive(true);
+                }
+                else if (charList.Tappy == true)
+                {
+                    biggieDeath.SetActive(true);
+                }
+                else if (charList.Tappy == true)
+                {
+                    oguDeath.SetActive(true);
+                }
+            }
+            charList.isStarted = false;
             scoreManager.scoreIncreaseRate = 0;
             //need disable player control
             deathScreen.SetActive(true);
-            timer -= Time.deltaTime;
+            timer -= Time.unscaledDeltaTime;
             timerText.text = Mathf.FloorToInt(timer).ToString();
             imageShake.StartShake();
             imageShake2.StartShake();
@@ -47,8 +79,9 @@ public class DeathScreen : MonoBehaviour
 
     public void ContinueButton()
     {
-        deathScreen.SetActive(false);
-        scoreManager.scoreIncreaseRate = 1;
+        //deathScreen.SetActive(false);
+        //scoreManager.scoreIncreaseRate = 1;\
+        sorry.SetActive(true );
     }
 
     public void BackButton()

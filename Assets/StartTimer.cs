@@ -7,7 +7,7 @@ public class StartTimer : MonoBehaviour
 {
     public TextMeshProUGUI startTimerText;
 
-    void Start()
+    void OnEnable()
     {
         StartCoroutine(Countdown());
         startTimerText = GetComponent<TextMeshProUGUI>();
@@ -17,11 +17,9 @@ public class StartTimer : MonoBehaviour
     {
         startTimerText.color = Color.yellow;
         startTimerText.text = "Ready?";
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSecondsRealtime(1f);
         startTimerText.color = Color.green;
         startTimerText.text = "Start!";
-        yield return new WaitForSeconds(1);
-
-        Destroy(gameObject);
+        
     }
 }

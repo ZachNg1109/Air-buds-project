@@ -19,7 +19,7 @@ public class WalkingScript : MonoBehaviour
 
     private void Update()
     {
-        float rotationStep = rotationSpeed * Time.deltaTime;
+        float rotationStep = rotationSpeed * Time.unscaledDeltaTime;
 
         if (rotatingUp)
         {
@@ -40,6 +40,6 @@ public class WalkingScript : MonoBehaviour
             }
         }
 
-        transform.localRotation = Quaternion.Euler(currentAngle, -90f, 90f);
+        transform.localRotation = Quaternion.Euler(currentAngle, 0f, -90f);
     }
 }

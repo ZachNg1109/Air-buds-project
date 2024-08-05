@@ -38,29 +38,38 @@ public class Special : MonoBehaviour
 
     public void MagicCarpet()
     {
+        if (!isCooldown)
+        {
+            
+            StartCoroutine(SetCombedForSeconds(5f));
+        }
         Skill();
 
     }
 
     public void FlightTicket()
     {
-        Skill();
+        
+        
         if (!isCooldown)
         {
             globe.speed = 200f;
+            StartCoroutine(SetCombedForSeconds(2.7f));
         }
+        Skill();
     }
     public void Headphone()
     {
-        Skill();
         if (!isCooldown)
         {
             globe.speed = 8f;
         }
+        Skill();
+        
     }
     public void Whistle()
     {
-        Skill();
+        
         if (!isCooldown)
         {
             List<GameObject> list = new List<GameObject> ();
@@ -68,39 +77,43 @@ public class Special : MonoBehaviour
             Destroy(birdos);
                 
         }
-
+        Skill();
     }
     public void MoneyGun()
     {
-        Skill();
+        
         if (!isCooldown)
         {
             decorationEffect.Play();
         }
+        Skill();
     }
     public void Coins()
     {
-        Skill();
         if (!isCooldown)
         {
             globe.CoinChallenge();
         }
+        Skill();
     }
     public void Combs()
     {
-        Skill();
+        
         if (!isCooldown)
         {
-            StartCoroutine(SetCombedForSeconds(2f));
+            StartCoroutine(SetCombedForSeconds(8f));
+
         }
+        Skill();
     }
     public void Sunglasses()
     {
-        Skill();
         if (!isCooldown)
         {
             playerConditions.isSunGlasses = true;
         }
+        Skill();
+        
     }
     public void Gadgets()
     {

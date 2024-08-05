@@ -9,6 +9,7 @@ TagManager:
   - Cloud
   - Building
   - Bird
+  - Skills
   layers:
   - Default
   - TransparentFX

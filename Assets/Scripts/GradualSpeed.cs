@@ -21,11 +21,7 @@ public class GradualSpeed : MonoBehaviour
 
     private void FixedUpdate()
     {
-        thresholdValue += Time.unscaledDeltaTime;
-        if(thresholdValue > 10f)
-        {
-            Time.timeScale += 0.001f;
-        }
+        
 
     }
 }

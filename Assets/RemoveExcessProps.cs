@@ -20,5 +20,10 @@ public class RemoveExcessProps : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
+
+        if (other.gameObject.CompareTag("Skills"))
+        {
+            Destroy(other.gameObject);
+        }
     }
 }

@@ -20,20 +20,22 @@ public class SpawnPowerups : MonoBehaviour
 
     public CharactersObjects charList;
 
+    public GameObject skillrefMiddle;
+
     private GameObject spawnedSkill;
     private int rand2;
-    private bool canSpawn;
+    private bool canSpawn = true;
     private float spawnCD = 0f;
 
     private void Start()
     {
-        rand2 = Random.Range(0, 3);
+        //rand2 = Random.Range(0, 3);
     }
 
     private void Update()
     {
 
-        if (charList.Tappy == true && charList.distance >= 15)
+        if (charList.Tappy == true && charList.distance >= 15 && canSpawn == true)
         {
             GameObject[] skills = new GameObject[2];
             skills[0] = tappy1;
@@ -43,12 +45,12 @@ public class SpawnPowerups : MonoBehaviour
 
             canSpawn = false;        
 
-            spawnedSkill = Instantiate(skills[n], new Vector3(68f + 2*((-1) ^ rand2), 1.98000002f, 96.7200027f), Quaternion.Euler(-90f, 0, -90));
+            spawnedSkill = Instantiate(skills[n], skillrefMiddle.transform.position, skillrefMiddle.transform.rotation);
             spawnedSkill.transform.SetParent(gameObject.transform, true);
             
         }
 
-        else if (charList.Bam == true && charList.distance >= 15)
+        else if (charList.Bam == true && charList.distance >= 15 && canSpawn == true)
         {
             GameObject[] skills = new GameObject[2];
             skills[0] = bam1;
@@ -58,12 +60,12 @@ public class SpawnPowerups : MonoBehaviour
 
             canSpawn = false;
 
-            spawnedSkill = Instantiate(skills[n], new Vector3(68f + 2 * ((-1) ^ rand2), 1.98000002f, 96.7200027f), Quaternion.Euler(-90f, 0, -90));
+            spawnedSkill = Instantiate(skills[n], skillrefMiddle.transform.position, skillrefMiddle.transform.rotation);
             spawnedSkill.transform.SetParent(gameObject.transform, true);
 
         }
 
-        else if (charList.Biggie == true && charList.distance >= 15)
+        else if (charList.Biggie == true && charList.distance >= 15 && canSpawn == true)
         {
             GameObject[] skills = new GameObject[2];
             skills[0] = biggie1;
@@ -73,12 +75,12 @@ public class SpawnPowerups : MonoBehaviour
 
             canSpawn = false;
 
-            spawnedSkill = Instantiate(skills[n], new Vector3(68f + 2 * ((-1) ^ rand2), 1.98000002f, 96.7200027f), Quaternion.Euler(-90f, 0, -90));
+            spawnedSkill = Instantiate(skills[n], skillrefMiddle.transform.position, skillrefMiddle.transform.rotation);
             spawnedSkill.transform.SetParent(gameObject.transform, true);
 
         }
 
-        else if (charList.Ogu == true && charList.distance >= 15)
+        else if (charList.Ogu == true && charList.distance >= 15 && canSpawn == true)
         {
             GameObject[] skills = new GameObject[2];
             skills[0] = ogu1;
@@ -88,7 +90,7 @@ public class SpawnPowerups : MonoBehaviour
 
             canSpawn = false;
 
-            spawnedSkill = Instantiate(skills[n], new Vector3(68f + 2 * ((-1) ^ rand2), 1.98000002f, 96.7200027f), Quaternion.Euler(-90f, 0, -90));
+            spawnedSkill = Instantiate(skills[n], skillrefMiddle.transform.position, skillrefMiddle.transform.rotation);
             spawnedSkill.transform.SetParent(gameObject.transform, true);
 
         }

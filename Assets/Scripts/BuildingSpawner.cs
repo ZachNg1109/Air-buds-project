@@ -31,7 +31,7 @@ public class BuildingSpawner : MonoBehaviour
             buildCD += Time.deltaTime;
 
 
-            if (buildCD > 0.7f)
+            if (buildCD > 0.2f)
             {
                 buildCD = 0;
                 canBuild = true;
@@ -72,7 +72,7 @@ public class BuildingSpawner : MonoBehaviour
     {
         canBuild = false;
         int randomObs = Random.Range(1, 7);
-        float rand = Random.Range(0f, 2.3f);
+        float rand = Random.Range(0f, 1f);
         yield return new WaitForSeconds(rand);
         switch (randomObs)
         {

@@ -12,4 +12,5 @@ public class CharactersObjects : ScriptableObject
     public bool Ogu;
     public int StarsCollected;
     public float distance;
+    public bool isStarted;
 }

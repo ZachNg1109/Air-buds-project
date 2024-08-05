@@ -13,7 +13,7 @@ public class Bomb : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (!playerConditions.isCombed) //&& other.gameObject.GetComponent<PlayerConditions>() != null)
+        if (!playerConditions.isCombed && other.gameObject.GetComponent<PlayerConditions>() != null)
         {
             playerConditions.isDead = true;
             Debug.Log("Bomb");

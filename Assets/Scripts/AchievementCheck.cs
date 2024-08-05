@@ -69,6 +69,10 @@ public class AchievementCheck : MonoBehaviour
         biggieHighscore.text = ("Longest Distance: " + PlayerPrefs.GetFloat("Biggie_Highscore").ToString() + "km");
         oguHighscore.text = ("Longest Distance: " + PlayerPrefs.GetFloat("Ogu_Highscore").ToString() + "km");
 
+        characterList.Tappy = false;
+        characterList.Bam = false;
+        characterList.Biggie = false;
+        characterList.Ogu = false;
 
     }
 

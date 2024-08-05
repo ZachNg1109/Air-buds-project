@@ -12,6 +12,7 @@ public class SkillsPickup : MonoBehaviour
     public GameObject skillButton1;
     public GameObject skillButton2;
     public CharactersObjects charlist;
+    public ScreenPause pauser;
 
     private void Awake()
     {
@@ -28,34 +29,40 @@ public class SkillsPickup : MonoBehaviour
         {
             Move2 = false;
             skillButton1.SetActive(true);
+            skillButton2.SetActive(false);
 
         }
         else if (Move2 == true)
         {
             Move1 = false;
             skillButton2.SetActive(true);
+            skillButton1.SetActive(false);
 
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<SkillBoolSelect>().skillMove1 == true)
+        if (other.gameObject.GetComponent<SkillBoolSelect>() != null && other.gameObject.GetComponent<SkillBoolSelect>().skillMove1 == true)
         {
             Move1 = true;
+            pauser.PauseScreen();
+            Destroy(other.gameObject);
 
         }
 
-        if (other.gameObject.GetComponent<SkillBoolSelect>().skillMove2 == true)
+        if (other.gameObject.GetComponent<SkillBoolSelect>() != null && other.gameObject.GetComponent<SkillBoolSelect>().skillMove2 == true)
         {
             Move2 = true;
+            pauser.PauseScreen();
+            Destroy(other.gameObject);
 
         }
 
-        if (other.gameObject.CompareTag("Star"))
-        {
-            charlist.StarsCollected += 1;
-        }
+        //if (other.gameObject.CompareTag("Star"))
+        //{
+        //    charlist.StarsCollected += 1;
+        //}
 
     }
 }
